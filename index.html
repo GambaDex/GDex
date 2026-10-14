@@ -265,6 +265,8 @@
     .status.live::before { background: var(--acid); box-shadow: 0 0 8px rgba(89,222,209,.65); }
     .card h3 { margin: 29px 0 5px; font: 700 2rem/1 var(--display); letter-spacing: .005em; text-transform: uppercase; }
     .card p { margin: 0 0 24px; color: var(--muted); font-size: .72rem; line-height: 1.55; }
+    .card .card-note { margin: -12px 0 22px; padding: 10px 13px; border-left: 2px solid var(--neon-cyan); background: linear-gradient(90deg, rgba(67,168,163,.09), rgba(67,168,163,0)); color: #cfe9e6; font-size: .68rem; line-height: 1.5; }
+    .card .card-note strong { color: var(--neon-cyan); font-weight: 700; }
     .card-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-top: 15px; border-top: 1px solid var(--line); }
     .region { color: #adb5b1; font: .6rem var(--mono); text-transform: uppercase; letter-spacing: .06em; }
     .pending { border: 0; padding: 0; color: #68706d; background: transparent; font: 600 .62rem var(--mono); letter-spacing: .06em; text-transform: uppercase; cursor: not-allowed; }
@@ -285,6 +287,57 @@
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* Left hero column: "The Best" showcase with the Stake sign-up bonus card beneath it. */
+    .hero-left { display: grid; gap: 22px; align-content: start; }
+    .bonus-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 13px;
+      padding: 24px 26px;
+      border: 1px solid #33415b;
+      background:
+        radial-gradient(circle at 0 0, rgba(67,168,163,.13), transparent 44%),
+        radial-gradient(circle at 100% 120%, rgba(155,117,65,.12), transparent 48%),
+        linear-gradient(120deg, rgba(11,17,24,.98), rgba(6,10,15,.98));
+      box-shadow: inset 0 0 46px rgba(0,0,0,.62), inset 0 1px 0 rgba(67,168,163,.16);
+      clip-path: polygon(0 0, 96% 0, 100% 20%, 100% 100%, 4% 100%, 0 80%);
+    }
+    .bonus-card::before { content: ""; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--neon-cyan), var(--cobalt), var(--neon-gold)); box-shadow: 0 0 14px rgba(67,168,163,.5); }
+    .bonus-card::after { content: "//"; position: absolute; right: 20px; bottom: -46px; color: rgba(89,222,209,.05); font: 800 8rem/1 var(--display); pointer-events: none; }
+    .partner-badge { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 5px 12px 5px 10px; border: 1px solid color-mix(in srgb, var(--neon-cyan) 45%, #202526); color: var(--neon-cyan); background: rgba(67,168,163,.07); font: 600 .57rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .partner-shield { width: 15px; height: 15px; flex: 0 0 auto; filter: drop-shadow(0 0 5px rgba(67,168,163,.55)); }
+    .bonus-card h2 { position: relative; z-index: 1; margin: 0; color: #eefafa; font: 700 clamp(1.5rem, 3.4vw, 2.15rem)/1.05 var(--display); letter-spacing: .01em; text-transform: uppercase; text-shadow: 0 0 18px rgba(67,168,163,.18); }
+    .bonus-card p { position: relative; z-index: 1; margin: 0; color: var(--text); font-size: .84rem; line-height: 1.6; }
+    .bonus-card p strong { font-weight: 700; }
+    .bonus-card .tri-cyan { color: #63e0d7; text-shadow: 0 0 12px rgba(99,224,215,.35); }
+    .bonus-card .tri-cobalt { color: #7d9be6; text-shadow: 0 0 12px rgba(125,155,230,.35); }
+    .bonus-card .tri-gold { color: #e3c07d; text-shadow: 0 0 12px rgba(227,192,125,.32); }
+    .bonus-claim {
+      position: relative;
+      z-index: 1;
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border: 1px solid var(--neon-cyan);
+      color: #031014;
+      background: linear-gradient(135deg, #7fe9e2, var(--neon-cyan) 55%, var(--cobalt));
+      font: 700 .72rem var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      clip-path: polygon(10% 0, 100% 0, 100% 74%, 90% 100%, 0 100%, 0 26%);
+      box-shadow: 0 0 22px rgba(67,168,163,.28), inset 0 1px 0 rgba(255,255,255,.35);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+    .bonus-claim::after { content: "\2197"; font-size: .9rem; }
+    .bonus-claim:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 0 30px rgba(67,168,163,.5), inset 0 1px 0 rgba(255,255,255,.4); }
+    .bonus-claim:focus-visible { outline: 2px solid #eafffb; outline-offset: 3px; }
+
     @media (max-width: 850px) {
       .hero-grid { grid-template-columns: 1fr; gap: 35px; }
       .hero-showcase { min-height: 470px; }
@@ -293,6 +346,7 @@
       .group-head p { grid-column: 2; }
       .cards { grid-template-columns: 1fr; }
       .hero::after { font-size: 19rem; }
+      .hero-left { gap: 18px; }
     }
     @media (max-width: 600px) {
       .shell { width: min(100% - 26px, 520px); }
@@ -315,6 +369,8 @@
       .group-head p { grid-column: auto; }
       .index { margin-bottom: 4px; }
       .card { min-height: 208px; padding: 20px; }
+      .bonus-card { padding: 20px; clip-path: none; }
+      .bonus-claim { width: 100%; justify-content: center; }
       .notice { grid-template-columns: 1fr; gap: 9px; }
       .footer-row { align-items: flex-start; flex-direction: column; justify-content: center; padding: 26px 0; }
     }
@@ -430,8 +486,21 @@
       <section class="hero">
         <div class="shell">
           <div class="hero-grid">
+            <div class="hero-left">
             <div class="hero-showcase">
               <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba</a><span class="hero-term-panel"><a href="#casinos"><span class="menu-glint">Casinos</span></a><a href="#us-casinos"><span class="menu-glint">U.S. Sweepstakes</span></a><a href="#hidden-gems"><span class="menu-glint">Hidden Gems</span></a></span></span><span class="hero-term-menu"><a class="hero-term-button gpt-word" href="#gpt">GPT</a><span class="hero-term-panel"><a href="#freecash"><span class="menu-glint">Freecash</span></a><a href="#earnx"><span class="menu-glint">Earnx.gg</span></a></span></span><a class="hero-term-link benefits-word" href="#rewards-details">Rewards</a></span><span class="hero-sub-banner"><span class="anywhere-word">Anywhere</span><span class="sub-dot">·</span><span class="guaranteed-word">Guaranteed</span></span></div>
+            </div>
+              <section class="hero-bonus" aria-labelledby="stake-bonus-heading">
+                <div class="bonus-card">
+                  <div class="partner-badge">
+                    <svg class="partner-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.4 12.1l2.5 2.5 4.7-5.1" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Official Partner of Stake.us</span>
+                  </div>
+                  <h2 id="stake-bonus-heading">Stake Sign-Up Bonus</h2>
+                  <p>Receive <strong class="tri-cyan">25 SC Free</strong>, <strong class="tri-cobalt">250,000 GC</strong>, and <strong class="tri-gold">3.5% rakeback</strong> unlocked.</p>
+                  <a class="bonus-claim" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim Bonus</a>
+                </div>
+              </section>
             </div>
             <div class="hero-copy">
               <div class="affiliate-plaque"><strong><span class="banner-top">Affiliate</span><span class="banner-bottom"><span class="rewards-word">Rewards</span> <span class="done-word">Done</span> <span class="right-word">Right</span></span></strong></div>
@@ -497,7 +566,8 @@
             <article class="card">
               <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#5ad6b8">S</div><span class="site-domain">STAKE.US</span></div><span class="status live">Referral live</span></div>
               <h3>Stake.us</h3><p>Social casino · Sweepstakes model</p>
-              <div class="card-foot"><span class="region">United States · Eligible states</span><a class="live-link" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Sign up for Stake.us</a></div>
+              <p class="card-note">Contact <strong>Stake.us support</strong> after sign up to receive your bonus!</p>
+              <div class="card-foot"><span class="region">United States · Eligible states</span><a class="live-link" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim sign-up bonus for Stake.us</a></div>
             </article>
             <article class="card">
               <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#8b79d2">SH</div><span class="site-domain">SHUFFLE.US</span></div><span class="status live">Referral live</span></div>
