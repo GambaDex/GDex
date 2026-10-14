@@ -127,8 +127,8 @@
 
     .hero { padding: 62px 0 38px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
     .hero::after { content: "//"; position: absolute; right: max(-35px, calc((100vw - 1200px)/2)); bottom: -84px; color: rgba(89,222,209,.045); font: 800 28rem/1 var(--display); pointer-events: none; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 470px; gap: 50px; align-items: start; position: relative; z-index: 1; }
-    .hero-showcase { min-height: 570px; position: relative; isolation: isolate; overflow: hidden; border: 1px solid rgba(67,168,163,.12); background: radial-gradient(circle at 50% 30%, rgba(67,168,163,.09), transparent 24%), radial-gradient(circle at 50% 42%, rgba(67,91,145,.08), transparent 42%), linear-gradient(145deg, rgba(3,8,13,.92), rgba(2,5,9,.5)); box-shadow: inset 0 0 55px rgba(0,0,0,.72), inset 0 1px 0 rgba(67,168,163,.12); clip-path: polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; justify-items: center; position: relative; z-index: 1; }
+    .hero-showcase { width: min(100%, 880px); min-height: 440px; position: relative; isolation: isolate; overflow: hidden; border: 1px solid rgba(67,168,163,.12); background: radial-gradient(circle at 50% 30%, rgba(67,168,163,.09), transparent 24%), radial-gradient(circle at 50% 42%, rgba(67,91,145,.08), transparent 42%), linear-gradient(145deg, rgba(3,8,13,.92), rgba(2,5,9,.5)); box-shadow: inset 0 0 55px rgba(0,0,0,.72), inset 0 1px 0 rgba(67,168,163,.12); clip-path: polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%); }
     .hero-showcase::before { content: ""; position: absolute; z-index: -2; left: -18%; right: -18%; bottom: -31%; height: 69%; background-image: linear-gradient(rgba(105,221,216,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(102,135,217,.13) 1px, transparent 1px); background-size: 38px 30px; transform: perspective(430px) rotateX(57deg); transform-origin: center bottom; mask-image: linear-gradient(to top, #000 34%, transparent 92%); }
     .hero-showcase::after { content: ""; position: absolute; z-index: -1; width: 390px; aspect-ratio: 1; left: 50%; top: 42px; border-radius: 50%; background: conic-gradient(from 20deg, transparent 0 8%, rgba(105,221,216,.9) 9% 11%, transparent 12% 34%, rgba(102,135,217,.8) 35% 37%, transparent 38% 67%, rgba(212,168,95,.78) 68% 70%, transparent 71%); -webkit-mask: radial-gradient(circle, transparent 0 55%, #000 56% 57%, transparent 58% 68%, #000 69% 70%, transparent 71%); mask: radial-gradient(circle, transparent 0 55%, #000 56% 57%, transparent 58% 68%, #000 69% 70%, transparent 71%); filter: drop-shadow(0 0 9px rgba(105,221,216,.55)); transform: translateX(-50%); animation: tron-orbit 18s linear infinite; }
     @keyframes tron-orbit { to { transform: translateX(-50%) rotate(360deg); } }
@@ -139,6 +139,7 @@
     .overline .best-word::before { content: ""; position: absolute; z-index: -1; inset: 14% -9% 5%; border-top: 1px solid rgba(105,221,216,.32); border-bottom: 1px solid rgba(212,168,95,.3); background: linear-gradient(90deg, transparent, rgba(102,135,217,.08), transparent); transform: skewX(-12deg); }
     .overline .best-word::after { content: ""; position: absolute; left: 2%; right: 2%; bottom: -.24em; height: 3px; background: linear-gradient(90deg, var(--neon-cyan), var(--cobalt), var(--neon-gold)); box-shadow: 0 0 9px rgba(102,135,217,.4); transform: skewX(-18deg); }
     .tagline-links { display: inline-flex; align-items: center; justify-content: center; gap: 19px; font: 400 clamp(1rem, 1.8vw, 1.4rem) "Michroma", sans-serif; letter-spacing: .045em; text-shadow: 0 0 7px rgba(105,221,216,.28), 2px 2px 0 #07121c; }
+    .overline .share-word { display: block; width: fit-content; margin: 15px auto 0; color: transparent; background: linear-gradient(90deg, var(--neon-cyan), var(--cobalt), var(--neon-gold)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font: 400 clamp(1.05rem, 2.1vw, 1.6rem) "Michroma", sans-serif; letter-spacing: .46em; text-indent: .46em; text-transform: uppercase; filter: drop-shadow(0 0 10px rgba(67,168,163,.28)); }
     .overline .offered-word { color: var(--cobalt); }
     .overline .anywhere-word { color: #fff; }
     .hero-term-link, .hero-term-button { border: 0; padding: 0; color: inherit; background: transparent; font: inherit; letter-spacing: inherit; text-decoration: none; text-transform: inherit; cursor: pointer; }
@@ -160,7 +161,7 @@
     .hero-sub-banner { width: fit-content; margin: 14px auto 0; padding: 7px 16px; display: flex; align-items: center; justify-content: center; gap: 11px; border: 1px solid #33415b; color: #fff; background: linear-gradient(90deg, rgba(105,221,216,.07), rgba(102,135,217,.13), rgba(212,168,95,.07)); box-shadow: inset 0 0 18px rgba(102,135,217,.05); }
     .hero-sub-banner .sub-dot { color: var(--cobalt); }
     .hero-sub-banner .guaranteed-word { color: #fff; }
-    .hero-copy { display: grid; gap: 12px; }
+    .hero-copy { width: min(100%, 880px); margin-top: 24px; display: grid; gap: 12px; }
     .most-sites-block, .difference-block { border: 1px solid #252f43; background: radial-gradient(circle at 100% 0, rgba(155,117,65,.06), transparent 42%), radial-gradient(circle at 0 100%, rgba(67,91,145,.06), transparent 48%), #05080d; box-shadow: 8px 8px 0 rgba(67,168,163,.025); overflow: hidden; }
     .most-sites-block { margin-top: 8px; }
     .most-sites-block .difference-title { text-align: center; }
@@ -287,73 +288,74 @@
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* Left hero column: "The Best" showcase with the Stake sign-up bonus card beneath it. */
-    .hero-left { display: grid; gap: 22px; align-content: start; }
+    /* Centered Stake sign-up bonus card beneath "The Best" showcase. */
+    .hero-bonus { width: min(100%, 820px); }
     .bonus-card {
       position: relative;
       overflow: hidden;
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 13px;
-      padding: 24px 26px;
+      gap: 15px;
+      padding: 34px 40px 36px;
+      text-align: center;
       border: 1px solid #33415b;
       background:
-        radial-gradient(circle at 0 0, rgba(67,168,163,.13), transparent 44%),
-        radial-gradient(circle at 100% 120%, rgba(155,117,65,.12), transparent 48%),
+        radial-gradient(circle at 0 0, rgba(67,168,163,.15), transparent 44%),
+        radial-gradient(circle at 100% 120%, rgba(155,117,65,.14), transparent 48%),
         linear-gradient(120deg, rgba(11,17,24,.98), rgba(6,10,15,.98));
-      box-shadow: inset 0 0 46px rgba(0,0,0,.62), inset 0 1px 0 rgba(67,168,163,.16);
+      box-shadow: inset 0 0 52px rgba(0,0,0,.62), inset 0 1px 0 rgba(67,168,163,.16);
       clip-path: polygon(0 0, 96% 0, 100% 20%, 100% 100%, 4% 100%, 0 80%);
     }
     .bonus-card::before { content: ""; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--neon-cyan), var(--cobalt), var(--neon-gold)); box-shadow: 0 0 14px rgba(67,168,163,.5); }
-    .bonus-card::after { content: "//"; position: absolute; right: 20px; bottom: -46px; color: rgba(89,222,209,.05); font: 800 8rem/1 var(--display); pointer-events: none; }
-    .partner-badge { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 5px 12px 5px 10px; border: 1px solid color-mix(in srgb, var(--neon-cyan) 45%, #202526); color: var(--neon-cyan); background: rgba(67,168,163,.07); font: 600 .57rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
-    .partner-shield { width: 15px; height: 15px; flex: 0 0 auto; filter: drop-shadow(0 0 5px rgba(67,168,163,.55)); }
-    .bonus-card h2 { position: relative; z-index: 1; margin: 0; color: #eefafa; font: 700 clamp(1.5rem, 3.4vw, 2.15rem)/1.05 var(--display); letter-spacing: .01em; text-transform: uppercase; text-shadow: 0 0 18px rgba(67,168,163,.18); }
-    .bonus-card p { position: relative; z-index: 1; margin: 0; color: var(--text); font-size: .84rem; line-height: 1.6; }
-    .bonus-card p strong { font-weight: 700; }
-    .bonus-card .tri-cyan { color: #63e0d7; text-shadow: 0 0 12px rgba(99,224,215,.35); }
-    .bonus-card .tri-cobalt { color: #7d9be6; text-shadow: 0 0 12px rgba(125,155,230,.35); }
-    .bonus-card .tri-gold { color: #e3c07d; text-shadow: 0 0 12px rgba(227,192,125,.32); }
+    .bonus-card::after { content: "//"; position: absolute; right: 22px; bottom: -52px; color: rgba(89,222,209,.05); font: 800 9rem/1 var(--display); pointer-events: none; }
+    .partner-badge { position: relative; z-index: 1; justify-self: center; display: inline-flex; align-items: center; gap: 10px; width: fit-content; padding: 8px 18px 8px 15px; border: 1px solid color-mix(in srgb, #f6b53c 58%, #202526); color: #f6b53c; background: rgba(246,181,60,.1); font: 800 .82rem var(--mono); letter-spacing: .13em; text-transform: uppercase; text-shadow: 0 0 12px rgba(246,181,60,.4); }
+    .partner-shield { width: 19px; height: 19px; flex: 0 0 auto; filter: drop-shadow(0 0 6px rgba(246,181,60,.65)); }
+    .bonus-card h2 { position: relative; z-index: 1; margin: 2px 0 0; color: #eefafa; font: 700 clamp(1.9rem, 4.2vw, 2.9rem)/1.05 var(--display); letter-spacing: .01em; text-transform: uppercase; text-shadow: 0 0 18px rgba(67,168,163,.18); }
+    .bonus-offer { position: relative; z-index: 1; margin: 0; display: grid; gap: 8px; }
+    .offer-hero { display: block; color: var(--neon-cyan); font: 700 clamp(2.7rem, 7.4vw, 4.8rem)/1 var(--display); letter-spacing: .012em; text-shadow: 0 0 22px rgba(67,168,163,.32), 0 0 46px rgba(67,168,163,.14); }
+    .offer-sub { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 6px 18px; color: var(--text); font-size: clamp(.86rem, 1.5vw, 1.02rem); line-height: 1.6; }
+    .offer-sub strong { font-weight: 800; font-size: clamp(1.15rem, 2.6vw, 1.7rem); letter-spacing: .01em; }
+    .bonus-card .tri-cobalt { color: var(--cobalt); text-shadow: 0 0 10px rgba(67,91,145,.35); }
+    .bonus-card .tri-gold { color: var(--neon-gold); text-shadow: 0 0 10px rgba(155,117,65,.32); }
     .bonus-claim {
       position: relative;
       z-index: 1;
-      justify-self: start;
+      justify-self: center;
+      margin-top: 6px;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
-      border: 1px solid var(--neon-cyan);
-      color: #031014;
-      background: linear-gradient(135deg, #7fe9e2, var(--neon-cyan) 55%, var(--cobalt));
-      font: 700 .72rem var(--mono);
+      gap: 11px;
+      padding: 16px 40px;
+      border: 1px solid rgba(255,255,255,.35);
+      color: #04120f;
+      background: linear-gradient(115deg, #7fe9e2 0%, #62cfc8 22%, #7f97d6 58%, #e3c07d 100%);
+      font: 700 .8rem var(--mono);
       letter-spacing: .1em;
       text-transform: uppercase;
       text-decoration: none;
       white-space: nowrap;
       clip-path: polygon(10% 0, 100% 0, 100% 74%, 90% 100%, 0 100%, 0 26%);
-      box-shadow: 0 0 22px rgba(67,168,163,.28), inset 0 1px 0 rgba(255,255,255,.35);
+      box-shadow: 0 0 26px rgba(67,168,163,.32), 0 0 42px rgba(155,117,65,.16), inset 0 1px 0 rgba(255,255,255,.45);
       transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
     }
-    .bonus-claim::after { content: "\2197"; font-size: .9rem; }
-    .bonus-claim:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 0 30px rgba(67,168,163,.5), inset 0 1px 0 rgba(255,255,255,.4); }
+    .bonus-claim::after { content: "\2197"; font-size: .95rem; }
+    .bonus-claim:hover { transform: translateY(-2px); filter: brightness(1.07); box-shadow: 0 0 34px rgba(67,168,163,.5), 0 0 54px rgba(155,117,65,.24), inset 0 1px 0 rgba(255,255,255,.5); }
     .bonus-claim:focus-visible { outline: 2px solid #eafffb; outline-offset: 3px; }
 
     @media (max-width: 850px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
-      .hero-showcase { min-height: 470px; }
-      .hero-copy { max-width: 520px; }
+      .hero-grid { gap: 22px; }
+      .hero-showcase { min-height: 420px; }
       .group-head { grid-template-columns: 50px 1fr; }
       .group-head p { grid-column: 2; }
       .cards { grid-template-columns: 1fr; }
       .hero::after { font-size: 19rem; }
-      .hero-left { gap: 18px; }
     }
     @media (max-width: 600px) {
       .shell { width: min(100% - 26px, 520px); }
       .nav-links > a { display: none; }
       .reward-menu summary { min-width: 132px; }
       .hero { padding: 56px 0 42px; }
-      .hero-showcase { min-height: 410px; }
+      .hero-showcase { min-height: 380px; }
       .hero-showcase .overline { margin-top: 72px; }
       .hero-showcase::after { width: 320px; top: 34px; }
       .affiliate-plaque { padding-inline: 4px; }
@@ -369,7 +371,7 @@
       .group-head p { grid-column: auto; }
       .index { margin-bottom: 4px; }
       .card { min-height: 208px; padding: 20px; }
-      .bonus-card { padding: 20px; clip-path: none; }
+      .bonus-card { padding: 26px 20px 28px; clip-path: none; }
       .bonus-claim { width: 100%; justify-content: center; }
       .notice { grid-template-columns: 1fr; gap: 9px; }
       .footer-row { align-items: flex-start; flex-direction: column; justify-content: center; padding: 26px 0; }
@@ -471,10 +473,10 @@
           <details class="reward-menu">
             <summary><span class="nav-glint">Explore</span></summary>
             <div class="reward-menu-panel">
-              <a href="#casinos"><span class="menu-glint">Explore Casinos</span></a>
-              <a href="#us-casinos"><span class="menu-glint">Explore U.S. Casinos</span></a>
-              <a href="#gpt"><span class="menu-glint">Explore GPT Platforms</span></a>
-              <a href="#rewards-details"><span class="menu-glint">Explore Rewards</span></a>
+              <a href="#casinos"><span class="menu-glint">Crypto Casinos</span></a>
+              <a href="#us-casinos"><span class="menu-glint">U.S. Casinos</span></a>
+              <a href="#gpt"><span class="menu-glint">GPT Platforms</span></a>
+              <a href="#rewards-details"><span class="menu-glint">Rewards</span></a>
 <a href="#registration-dialog" class="register-trigger" aria-haspopup="dialog"><span class="menu-glint">Register here</span></a>
                       <button type="button" class="nav-contact-trigger" aria-haspopup="dialog"><span class="menu-glint">Contact us</span></button>
             </div>
@@ -486,9 +488,8 @@
       <section class="hero">
         <div class="shell">
           <div class="hero-grid">
-            <div class="hero-left">
             <div class="hero-showcase">
-              <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba</a><span class="hero-term-panel"><a href="#casinos"><span class="menu-glint">Casinos</span></a><a href="#us-casinos"><span class="menu-glint">U.S. Sweepstakes</span></a><a href="#hidden-gems"><span class="menu-glint">Hidden Gems</span></a></span></span><span class="hero-term-menu"><a class="hero-term-button gpt-word" href="#gpt">GPT</a><span class="hero-term-panel"><a href="#freecash"><span class="menu-glint">Freecash</span></a><a href="#earnx"><span class="menu-glint">Earnx.gg</span></a></span></span><a class="hero-term-link benefits-word" href="#rewards-details">Rewards</a></span><span class="hero-sub-banner"><span class="anywhere-word">Anywhere</span><span class="sub-dot">·</span><span class="guaranteed-word">Guaranteed</span></span></div>
+              <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba</a><span class="hero-term-panel"><a href="#casinos"><span class="menu-glint">Crypto Casinos</span></a><a href="#us-casinos"><span class="menu-glint">U.S. Sweepstakes</span></a><a href="#hidden-gems"><span class="menu-glint">Hidden Gems</span></a></span></span><span class="hero-term-menu"><a class="hero-term-button gpt-word" href="#gpt">GPT</a><span class="hero-term-panel"><a href="#freecash"><span class="menu-glint">Freecash</span></a><a href="#earnx"><span class="menu-glint">Earnx.gg</span></a></span></span><a class="hero-term-link benefits-word" href="#rewards-details">Rewards</a></span><span class="share-word">Share</span><span class="hero-sub-banner"><span class="anywhere-word">Anywhere</span><span class="sub-dot">·</span><span class="guaranteed-word">Guaranteed</span></span></div>
             </div>
               <section class="hero-bonus" aria-labelledby="stake-bonus-heading">
                 <div class="bonus-card">
@@ -497,11 +498,13 @@
                     <span>Official Partner of Stake.us</span>
                   </div>
                   <h2 id="stake-bonus-heading">Stake Sign-Up Bonus</h2>
-                  <p>Receive <strong class="tri-cyan">25 SC Free</strong>, <strong class="tri-cobalt">250,000 GC</strong>, and <strong class="tri-gold">3.5% rakeback</strong> unlocked.</p>
+                  <p class="bonus-offer">
+                    <strong class="offer-hero">25 SC Free</strong>
+                    <span class="offer-sub"><strong class="tri-cobalt">250,000 GC</strong><strong class="tri-gold">3.5% rakeback</strong></span>
+                  </p>
                   <a class="bonus-claim" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim Bonus</a>
                 </div>
               </section>
-            </div>
             <div class="hero-copy">
               <div class="affiliate-plaque"><strong><span class="banner-top">Affiliate</span><span class="banner-bottom"><span class="rewards-word">Rewards</span> <span class="done-word">Done</span> <span class="right-word">Right</span></span></strong></div>
               <div class="difference-block">
@@ -529,7 +532,7 @@
 
       <div class="jumpbar">
         <div class="jumpbar-inner shell">
-          <a href="#casinos">Casinos</a>
+          <a href="#casinos">Crypto Casinos</a>
           <a href="#us-casinos">U.S. Sweepstakes</a>
           <a href="#gpt">Get Paid To (GPT)</a>
         </div>
@@ -538,8 +541,8 @@
       <div class="directory shell" id="rewards">
         <section class="group reveal" id="casinos">
           <div class="group-head">
-            <span class="index">01 / CASINOS</span>
-            <h2>Casinos</h2>
+            <span class="index">01 / CRYPTO CASINOS</span>
+            <h2>Crypto Casinos</h2>
             <p>International platforms. Access, licensing, payment options, and rules vary by jurisdiction.</p>
           </div>
           <div class="cards">
