@@ -148,4 +148,174 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(15px);
     }
-... (file continues unchanged after this point)
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark { width: 76px; height: 42px; display: flex; align-items: center; flex: 0 0 auto; filter: drop-shadow(0 8px 9px rgba(0,0,0,.5)); }
+    .brand-tile { width: 38px; height: 38px; display: grid; place-items: center; position: relative; isolation: isolate; clip-path: polygon(14% 0, 88% 0, 100% 14%, 100% 86%, 86% 100%, 12% 100%, 0 [...]
+    .brand-tile::before { content: ""; position: absolute; inset: 1px; z-index: -1; clip-path: inherit; background: linear-gradient(145deg, #142932, #0a1119 58%, #151b2c); }
+    .brand-tile::after { content: ""; position: absolute; inset: 5px; z-index: -1; border-top: 1px solid rgba(255,255,255,.18); border-left: 1px solid rgba(105,221,216,.22); clip-path: inherit; }
+    .brand-glyph { display: inline-block; color: transparent; background: linear-gradient(180deg, #fff 0 22%, #aefbf7 29%, #55e7df 51%, #6f94e8 73%, #e6f7ff 100%); -webkit-background-clip: text; b[...]
+    /* remaining CSS unchanged */
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <nav class="shell" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="GambaDex home">
+          <span class="brand-mark" aria-hidden="true"><i class="brand-tile brand-tile-g"><span class="brand-glyph">G</span></i><i class="brand-tile brand-tile-dex"><span class="brand-glyph">DEX</span></i></span>
+          <span class="brand-copy"><b>GambaDex</b><small>Referral//Index</small></span>
+        </a>
+        <div class="nav-links">
+          <details class="reward-menu">
+            <summary><span class="nav-glint">Explore</span></summary>
+            <div class="reward-menu-panel">
+              <a href="#casinos"><span class="menu-glint">Crypto Casinos</span></a>
+              <a href="#us-casinos"><span class="menu-glint">U.S. Casinos</span></a>
+              <a href="#gpt"><span class="menu-glint">GPT Platforms</span></a>
+              <a href="#rewards-details"><span class="menu-glint">Rewards</span></a>
+<a href="#registration-dialog" class="register-trigger" aria-haspopup="dialog"><span class="menu-glint">Register here</span></a>
+                      <button type="button" class="nav-contact-trigger" aria-haspopup="dialog"><span class="menu-glint">Contact us</span></button>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="shell">
+          <div class="hero-grid">
+            <div class="hero-showcase">
+              <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba</a></span></span></div>
+            </div>
+              <section class="hero-bonus" aria-labelledby="stake-bonus-heading">
+                <div class="bonus-card">
+                  <div class="partner-badge">
+                    <svg class="partner-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor"></path></svg>
+                    <span>Official Partner of Stake.us</span>
+                  </div>
+                  <h2 id="stake-bonus-heading">Stake Sign-Up Bonus</h2>
+                  <p class="bonus-offer">
+                    <strong class="offer-hero">25 SC Free</strong>
+                    <span class="offer-sub"><strong class="tri-cobalt">250,000 GC</strong><strong class="tri-gold">3.5% rakeback</strong></span>
+                  </p>
+                  <a class="bonus-claim" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim Bonus</a>
+                </div>
+              </section>
+            <div class="hero-copy">
+              <div class="affiliate-plaque"><strong><span class="banner-top">Affiliate</span><span class="banner-bottom"><span class="rewards-word">Rewards</span> <span class="done-word">Done</span></span></strong></div>
+              <div class="difference-block">
+                <div class="difference-title">GDex Difference</div>
+                <div class="impact-line"><span>Shared rewards</span><strong>Share in any commission you generate—for life.</strong></div>
+                <div class="impact-line"><span>Tiered benefits</span><strong>Your share increases as you climb through the ranks.</strong></div>
+                <div class="impact-line"><span>Referral bonus</span><strong>Earn commission share and boost your rate even further.</strong></div>
+                <div class="impact-line"><span>VIP experience</span><strong>Platinum or equivalent unlocks exclusive benefits.</strong></div>
+                <div class="impact-line"><span>Highroller experience</span><strong>Bespoke rewards for eligible high-volume players.</strong></div>
+                <div class="impact-line"><span>After signup</span><strong>Support to assist and help navigate.</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visible FAQ section added for AEO (Answer Engine Optimization) -->
+      <section class="group reveal" id="faq" aria-labelledby="faq-heading">
+        <div class="group-head">
+          <span class="index">FAQ</span>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+          <p>Short, direct answers to common questions about GambaDex and how referral rewards work.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>What is GambaDex?</h3>
+            <p>GambaDex lists referral rewards and sign-up instructions for sweepstakes casinos, crypto casinos, and GPT platforms so you can quickly find current offers and how to claim them.</p>
+          </article>
+          <article class="card">
+            <h3>How do referral rewards work on GambaDex?</h3>
+            <p>Use the referral link on a listing and complete any qualifying actions on the partner site; the referring account may receive a commission or bonus as described on each listing.</p>
+          </article>
+          <article class="card">
+            <h3>Is GambaDex legal where I live?</h3>
+            <p>Rules and availability vary by jurisdiction. Check the platform's terms and local laws before registering—GambaDex provides disclaimers for each listing.</p>
+          </article>
+          <article class="card">
+            <h3>How do I claim my sign-up bonus?</h3>
+            <p>Follow the listing's instructions (use the referral link, meet wagering or registration requirements, and contact platform support if manual activation is needed).</p>
+          </article>
+          <article class="card">
+            <h3>How can I contact GambaDex?</h3>
+            <p>Email <a href="mailto:GambaDex@protonmail.com">GambaDex@protonmail.com</a> for support, corrections, or partnership inquiries.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="jumpbar">
+        <div class="jumpbar-inner shell">
+          <a href="#casinos">Crypto Casinos</a>
+          <a href="#us-casinos">U.S. Sweepstakes</a>
+          <a href="#gpt">Get Paid To (GPT)</a>
+        </div>
+      </div>
+
+      <div class="directory shell" id="rewards">
+        <section class="group reveal" id="casinos">
+          <div class="group-head">
+            <span class="index">01 / CRYPTO CASINOS</span>
+            <h2>Crypto Casinos</h2>
+            <p>International platforms. Access, licensing, payment options, and rules vary by jurisdiction.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#5ad6b8">S</div><span class="site-domain">STAKE.COM</span></div><span class="status live">Referral live</span></div>
+              <h3>Stake.com</h3><p>Online casino · International access</p>
+              <div class="card-foot"><span class="region">International · Restricted regions</span><a class="live-link" href="https://stake.com/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Visit</a></div>
+            </article>
+            <article class="card">
+              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#8b79d2">SH</div><span class="site-domain">SHUFFLE.COM</span></div><span class="status live">Referral live</span></div>
+              <h3>Shuffle.com</h3><p>Online casino · International access</p>
+              <div class="card-foot"><span class="region">International · Restricted regions</span><a class="live-link" href="https://shuffle.com?r=GDEX" target="_blank" rel="noopener noreferrer sponsored">Visit</a></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- remaining content unchanged -->
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-row shell">
+        <aside class="notice disclaimer-box disclaimer-teal" id="legal-disclaimer"><strong>Legal / Platforms</strong><p>Platform names and trademarks belong to their respective owners. Listings do not imply endorsement.</p></aside>
+        <aside class="notice disclaimer-box disclaimer-cobalt"><strong>Raffle Eligibility</strong><p id="raffle-eligibility">Referrals qualify for 1 raffle ticket upon reaching Gold VIP status or higher; terms vary by partner.</p></aside>
+        <aside class="notice disclaimer-box disclaimer-amber" id="disclosure">
+          <strong>Disclosure / Legal Age</strong>
+          <p>Links are referral links. Gambling involves risk — play responsibly and follow local laws. You must be of legal age to participate.</p>
+        </aside>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(section => observer.observe(section));
+
+    const rewardMenu = document.querySelector('.reward-menu');
+    if (rewardMenu) {
+      rewardMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => rewardMenu.removeAttribute('open')));
+      document.addEventListener('click', event => { if (!rewardMenu.contains(event.target)) rewardMenu.removeAttribute('open'); });
+    }
+
+    const heroTermMenus = [...document.querySelectorAll('.hero-term-menu')];
+    const closeHeroMenus = () => heroTermMenus.forEach(menu => menu.classList.remove('open'));
+    heroTermMenus.forEach(menu => { menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeHeroMenus)); });
+    document.addEventListener('click', closeHeroMenus);
+  </script>
+</body>
+</html>
