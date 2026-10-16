@@ -1,0 +1,3 @@
+Sitemap: https://gambadex.github.io/GDex/sitemap.xml
+User-agent: *
+Allow: /
