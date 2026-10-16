@@ -16,8 +16,65 @@
   <meta name="twitter:description" content="GambaDex referral rewards for sweepstakes casinos, Casinos, and get-paid-to platforms.">
   <meta name="twitter:image" content="https://gambadex.github.io/GDex/images/og-image.png">
   <link rel="alternate" type="application/rss+xml" title="GambaDex RSS" href="/feed.xml">
+
+  <!-- Structured data: Organization, Website, and FAQ to improve SEO/AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://gambadex.github.io/GDex/#organization",
+        "name": "GambaDex",
+        "url": "https://gambadex.github.io/GDex/",
+        "logo": "https://gambadex.github.io/GDex/images/logo.png",
+        "contactPoint": [{"@type":"ContactPoint","email":"GambaDex@protonmail.com","contactType":"customer support"}],
+        "sameAs": ["https://github.com/GambaDex"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gambadex.github.io/GDex/#website",
+        "url": "https://gambadex.github.io/GDex/",
+        "name": "GambaDex",
+        "publisher": {"@id": "https://gambadex.github.io/GDex/#organization"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is GambaDex?",
+            "acceptedAnswer": {"@type": "Answer", "text": "GambaDex is an index of referral rewards and bonus information for sweepstakes-style casinos, crypto casinos, and get-paid-to (GPT) platforms."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do referral rewards work on GambaDex?",
+            "acceptedAnswer": {"@type": "Answer", "text": "GambaDex lists referral links and bonus instructions; when you sign up through those links and complete qualifying activity, the referring party may receive a commission or bonus as disclosed on each listing."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is GambaDex legal where I live?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Availability and legality vary by jurisdiction. GambaDex provides platform details and disclaimers; always check local laws and the platform's terms before registering."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I claim my sign-up bonus?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Follow the instructions on the platform's listing (e.g., use the provided referral link and contact the platform's support if the bonus requires manual activation)."}
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact GambaDex?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Email GambaDex@protonmail.com for support or partnership inquiries."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <title>GambaDex - Casino & GPT Referral Rewards</title>
   <style>
+    .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Michroma&display=swap')[...]
 
     :root {
@@ -91,50 +148,4 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(15px);
     }
-    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-mark { width: 76px; height: 42px; display: flex; align-items: center; flex: 0 0 auto; filter: drop-shadow(0 8px 9px rgba(0,0,0,.5)); }
-    .brand-tile { width: 38px; height: 38px; display: grid; place-items: center; position: relative; isolation: isolate; clip-path: polygon(14% 0, 88% 0, 100% 14%, 100% 86%, 86% 100%, 12% 100%, 0 [...]
-    .brand-tile::before { content: ""; position: absolute; inset: 1px; z-index: -1; clip-path: inherit; background: linear-gradient(145deg, #142932, #0a1119 58%, #151b2c); }
-    .brand-tile::after { content: ""; position: absolute; inset: 5px; z-index: -1; border-top: 1px solid rgba(255,255,255,.18); border-left: 1px solid rgba(105,221,216,.22); clip-path: inherit; }
-    .brand-glyph { display: inline-block; color: transparent; background: linear-gradient(180deg, #fff 0 22%, #aefbf7 29%, #55e7df 51%, #6f94e8 73%, #e6f7ff 100%); -webkit-background-clip: text; b[...]
-    .brand-tile-g .brand-glyph { font-size: 1rem; }
-    .brand-tile-dex { margin-left: -4px; color: #fff5df; background: linear-gradient(145deg, var(--cobalt), var(--neon-gold)); font-size: .52rem; transform: rotate(5deg); box-shadow: inset 0 0 18p[...]
-    .brand-tile-dex .brand-glyph { font-size: .58rem; font-weight: 700; letter-spacing: -.025em; -webkit-text-stroke: .65px #010508; transform: scaleX(1.04); }
-    .brand:hover .brand-tile-g { transform: translate(-2px,-2px) rotate(-8deg); filter: drop-shadow(0 0 6px rgba(105,221,216,.42)); }
-    .brand:hover .brand-tile-dex { transform: translate(2px,-2px) rotate(8deg); filter: drop-shadow(0 0 6px rgba(212,168,95,.38)); }
-    .brand-copy { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
-    .brand-copy b { color: transparent; background: linear-gradient(90deg, #eefafa 0%, var(--neon-cyan) 42%, var(--cobalt) 72%, var(--neon-gold) 100%); -webkit-background-clip: text; background-cl[...]
-    .brand-copy small { margin-top: 4px; color: var(--muted); font: 500 .48rem var(--mono); letter-spacing: .15em; text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 26px; }
-    .nav-links a { color: var(--muted); text-decoration: none; font: 500 .68rem var(--mono); text-transform: uppercase; transition: color .16s; }
-    .nav-links a:hover { color: var(--acid); }
-    .reward-menu { position: relative; }
-    .reward-menu summary { list-style: none; min-width: 142px; padding: 10px 12px; border: 1px solid #30495a; color: #eaffff; background: linear-gradient(145deg, rgba(105,221,216,.08), rgba(7,13,[...]
-    .reward-menu summary::-webkit-details-marker { display: none; }
-    .reward-menu summary::after { content: "+"; float: right; color: var(--acid); margin-left: 18px; }
-    .reward-menu[open] summary { border-color: var(--acid); }
-    .reward-menu[open] summary::after { content: "−"; }
-    .reward-menu-panel { position: absolute; top: calc(100% + 9px); right: 0; width: 260px; padding: 7px; border: 1px solid #26323d; background: #04070b; box-shadow: 0 16px 35px rgba(0,0,0,.58); [...]
-    .reward-menu-panel a { display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid var(--line); color: #d7f4f2; font: 400 .54rem "Michroma[...]
-    .reward-menu-panel a:last-child { border-bottom: 0; }
-    .reward-menu-panel a::after { content: "↘"; color: var(--acid); }
-    .reward-menu-panel a:hover { color: var(--text); background: var(--panel-2); }
-    .nav-glint, .menu-glint { display: inline-block; color: transparent; background: linear-gradient(180deg, #ffffff 0 24%, #aefbf7 29%, #55e7df 50%, #6f94e8 72%, #e6f7ff 100%); -webkit-backgroun[...]
-    .nav-glint { font-size: .68rem; letter-spacing: .055em; }
-    .menu-glint { font-size: .59rem; letter-spacing: .045em; }
-
-    .affiliate-plaque { padding: 8px 10px 13px; }
-    .affiliate-plaque strong { width: min(92%, 390px); margin: 0 auto; padding: 12px 24px 16px; display: block; position: relative; isolation: isolate; color: var(--text); font-family: var(--disp[...]
-    .affiliate-plaque strong::before { content: ""; position: absolute; z-index: -2; inset: 0; border: 1px solid rgba(151,224,220,.5); background: linear-gradient(155deg, rgba(105,221,216,.15), r[...]
-    .affiliate-plaque strong::after { content: ""; position: absolute; z-index: -1; left: 4%; right: 1%; bottom: 5px; height: 3px; background: linear-gradient(90deg, var(--neon-cyan), var(--cobal[...]
-    .affiliate-plaque .banner-top, .affiliate-plaque .banner-bottom { display: block; }
-    .affiliate-plaque .banner-top { width: fit-content; margin: 0 auto; position: relative; color: #f7fbff; font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; line-height: .9; letter-spac[...]
-    .affiliate-plaque .banner-top::after { content: ""; position: absolute; right: 0; bottom: -.2em; left: 0; height: 3px; border: 1px solid #000; background: linear-gradient(90deg, var(--neon-cy[...]
-    .affiliate-plaque .banner-bottom { margin-top: 11px; font-size: clamp(.88rem, 1.6vw, 1.14rem); font-weight: 800; line-height: .95; letter-spacing: .045em; -webkit-text-stroke: 1.25px #000; pa[...]
-    .affiliate-plaque .rewards-word { color: var(--neon-cyan); }
-    .affiliate-plaque .done-word { color: var(--cobalt); }
-    .affiliate-plaque .right-word { color: var(--neon-gold); }
-
-    .hero { padding: 62px 0 38px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
 ... (file continues unchanged after this point)
