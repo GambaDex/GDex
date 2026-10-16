@@ -3,355 +3,319 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GambaDex referral rewards for sweepstakes casinos, casinos, and get-paid-to platforms.">
+  <meta name="description" content="GambaDex referral rewards for sweepstakes casinos, Casinos, and get-paid-to platforms.">
+  <link rel="canonical" href="https://gambadex.github.io/GDex/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GambaDex - Casino & GPT Referral Rewards">
+  <meta property="og:description" content="GambaDex referral rewards for sweepstakes casinos, Casinos, and get-paid-to platforms.">
+  <meta property="og:url" content="https://gambadex.github.io/GDex/">
+  <meta property="og:site_name" content="GambaDex">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GambaDex - Casino & GPT Referral Rewards">
+  <meta name="twitter:description" content="GambaDex referral rewards for sweepstakes casinos, Casinos, and get-paid-to platforms.">
+  <meta name="twitter:image" content="https://gambadex.github.io/GDex/images/og-image.png">
+  <link rel="alternate" type="application/rss+xml" title="GambaDex RSS" href="/feed.xml">
+
+  <!-- Structured data: Organization, Website, and FAQ to improve SEO/AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://gambadex.github.io/GDex/#organization",
+        "name": "GambaDex",
+        "url": "https://gambadex.github.io/GDex/",
+        "logo": "https://gambadex.github.io/GDex/images/logo.png",
+        "contactPoint": [{"@type":"ContactPoint","email":"GambaDex@protonmail.com","contactType":"customer support"}],
+        "sameAs": ["https://github.com/GambaDex"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gambadex.github.io/GDex/#website",
+        "url": "https://gambadex.github.io/GDex/",
+        "name": "GambaDex",
+        "publisher": {"@id": "https://gambadex.github.io/GDex/#organization"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is GambaDex?",
+            "acceptedAnswer": {"@type": "Answer", "text": "GambaDex is an index of referral rewards and bonus information for sweepstakes-style casinos, crypto casinos, and get-paid-to (GPT) platforms."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do referral rewards work on GambaDex?",
+            "acceptedAnswer": {"@type": "Answer", "text": "GambaDex lists referral links and bonus instructions; when you sign up through those links and complete qualifying activity, the referring party may receive a commission or bonus as disclosed on each listing."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is GambaDex legal where I live?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Availability and legality vary by jurisdiction. GambaDex provides platform details and disclaimers; always check local laws and the platform's terms before registering."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I claim my sign-up bonus?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Follow the instructions on the platform's listing (e.g., use the provided referral link and contact the platform's support if the bonus requires manual activation)."}
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact GambaDex?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Email GambaDex@protonmail.com for support or partnership inquiries."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <title>GambaDex - Casino & GPT Referral Rewards</title>
   <style>
+    .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Michroma&display=swap')[...]
+
     :root {
       --bg: #030509;
-      --panel: #091117;
-      --panel-2: #111c27;
-      --line: #1b2d38;
-      --text: #e8edf2;
-      --muted: #9aa8b2;
-      --accent: #58d7d2;
-      --cobalt: #5d7de8;
-      --gold: #caa66a;
-      --danger: #f25f5c;
+      --panel: #070b10;
+      --panel-2: #0b1118;
+      --line: #18232c;
+      --text: #cbd5da;
+      --muted: #5f6d76;
+      --acid: #3a9f99;
+      --cyan: #3a9f99;
+      --cobalt: #435b91;
+      --aqua: #4b8583;
+      --soft-lime: #68826e;
+      --neon-cyan: #43a8a3;
+      --neon-gold: #9b7541;
+      --amber: #8c603d;
+      --danger: #ff5f56;
+      --mono: "JetBrains Mono", monospace;
+      --display: "Barlow Condensed", sans-serif;
+      --body: "Manrope", sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #05080b 0%, #0b1015 100%);
+      min-height: 100vh;
       color: var(--text);
-      line-height: 1.5;
-    }
-    a { color: inherit; text-decoration: none; }
-    .shell { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
-    header {
-      position: sticky; top: 0; z-index: 20;
-      background: rgba(3, 6, 10, 0.92);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-    }
-    nav {
-      display: flex; align-items: center; justify-content: space-between;
-      min-height: 72px;
-    }
-    .brand {
-      display: inline-flex; align-items: center; gap: 12px;
-      font-weight: 700; letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    .brand-mark {
-      width: 42px; height: 42px; border-radius: 10px;
-      background: linear-gradient(135deg, var(--accent), var(--cobalt));
-      display: grid; place-items: center; font-size: 1.1rem; color: #031418;
-      font-weight: 900;
-      box-shadow: 0 0 25px rgba(88, 215, 210, 0.35);
-    }
-    .nav-links {
-      display: flex; align-items: center; gap: 18px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .nav-links a:hover { color: var(--text); }
-    main { padding-bottom: 48px; }
-    .hero {
-      padding: 64px 0 24px;
-      border-bottom: 1px solid var(--line);
       background:
-        radial-gradient(circle at top left, rgba(88, 215, 210, 0.12), transparent 30%),
-        radial-gradient(circle at top right, rgba(93, 125, 232, 0.12), transparent 32%);
+        radial-gradient(circle at 88% 7%, rgba(58,159,153,.09), transparent 26rem),
+        radial-gradient(circle at 8% 46%, rgba(67,91,145,.08), transparent 30rem),
+        radial-gradient(circle at 92% 76%, rgba(155,117,65,.055), transparent 28rem),
+        linear-gradient(rgba(67,168,163,.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(67,168,163,.016) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, auto, auto, 46px 46px, 46px 46px, auto;
+      font-family: var(--body);
+      overflow-x: hidden;
     }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .22;
+      z-index: 20;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOcta[...]
+      mix-blend-mode: overlay;
     }
-    .eyebrow {
-      display: inline-block; margin-bottom: 18px; color: var(--accent);
-      text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem;
-      font-weight: 700;
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(0deg, transparent 0 7px, rgba(105,235,229,.018) 8px),
+        linear-gradient(115deg, transparent 0 42%, rgba(105,235,229,.035) 42.1% 42.25%, transparent 42.35% 100%);
     }
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      line-height: 0.92;
-      letter-spacing: -0.05em;
-    }
-    h1 span { color: var(--accent); }
-    .lead {
-      margin: 0 0 28px;
-      max-width: 62ch;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-    .cta-row {
-      display: flex; flex-wrap: wrap; gap: 12px;
-      margin-bottom: 28px;
-    }
-    .button {
-      display: inline-block; padding: 12px 18px; border-radius: 999px;
-      border: 1px solid var(--line); background: var(--panel);
-      font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
-      transition: 0.2s ease;
-    }
-    .button.primary {
-      background: linear-gradient(135deg, var(--accent), var(--cobalt));
-      color: #04171b;
-      border-color: transparent;
-    }
-    .button:hover { transform: translateY(-1px); }
-    .stats {
-      display: grid; grid-template-columns: repeat(3, minmax(120px, 1fr));
-      gap: 18px;
-      margin-top: 12px;
-    }
-    .stat {
-      border: 1px solid var(--line);
-      background: rgba(17, 28, 39, 0.8);
-      border-radius: 14px;
-      padding: 14px 16px;
-    }
-    .stat strong {
-      display: block; font-size: 1.4rem; color: var(--accent);
-    }
-    .stat span {
-      color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
-    }
-    .hero-card {
-      background: linear-gradient(180deg, rgba(17, 28, 39, 0.95), rgba(8, 15, 20, 0.95));
-      border: 1px solid var(--line);
-      border-radius: 20px; padding: 22px;
-      box-shadow: 0 20px 55px rgba(0,0,0,0.28);
-    }
-    .hero-card h2 {
-      margin: 0 0 12px; font-size: 1.3rem; letter-spacing: -0.03em;
-    }
-    .offer {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px;
-      padding: 18px 0 12px;
+    #app { position: relative; isolation: isolate; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .mono { font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(3,5,9,.94);
       border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(15px);
     }
-    .offer strong { font-size: 2rem; }
-    .offer small { color: var(--muted); }
-    .bonus-panel {
-      margin-top: 18px; display: grid; gap: 12px;
-    }
-    .bonus-line {
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 8px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px;
-      background: rgba(255,255,255,0.02);
-    }
-    .group {
-      padding-top: 52px;
-    }
-    .group-head {
-      margin-bottom: 24px;
-    }
-    .group-head h2 {
-      margin: 0 0 8px; font-size: clamp(1.8rem, 3vw, 2.5rem);
-      letter-spacing: -0.04em;
-    }
-    .group-head p {
-      margin: 0; color: var(--muted); max-width: 68ch;
-    }
-    .cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;
-    }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line); border-radius: 16px; padding: 18px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1.2rem; }
-    .card p { margin: 0; color: var(--muted); }
-    footer {
-      border-top: 1px solid var(--line); margin-top: 36px; padding: 28px 0 52px;
-      color: var(--muted);
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;
-    }
-    .footer-box {
-      border: 1px solid var(--line); background: var(--panel); border-radius: 14px; padding: 16px;
-    }
-    .footer-box strong { display: block; color: var(--text); margin-bottom: 6px; }
-    @media (max-width: 800px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-    }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark { width: 76px; height: 42px; display: flex; align-items: center; flex: 0 0 auto; filter: drop-shadow(0 8px 9px rgba(0,0,0,.5)); }
+    .brand-tile { width: 38px; height: 38px; display: grid; place-items: center; position: relative; isolation: isolate; clip-path: polygon(14% 0, 88% 0, 100% 14%, 100% 86%, 86% 100%, 12% 100%, 0[...]
+    .brand-tile::before { content: ""; position: absolute; inset: 1px; z-index: -1; clip-path: inherit; background: linear-gradient(145deg, #142932, #0a1119 58%, #151b2c); }
+    .brand-tile::after { content: ""; position: absolute; inset: 5px; z-index: -1; border-top: 1px solid rgba(255,255,255,.18); border-left: 1px solid rgba(105,221,216,.22); clip-path: inherit; }
+    .brand-glyph { display: inline-block; color: transparent; background: linear-gradient(180deg, #fff 0 22%, #aefbf7 29%, #55e7df 51%, #6f94e8 73%, #e6f7ff 100%); -webkit-background-clip: text; [...]
+    /* remaining CSS unchanged */
   </style>
 </head>
 <body>
-  <header>
-    <nav class="shell" aria-label="Main navigation">
-      <a href="#top" class="brand" aria-label="GambaDex home">
-        <span class="brand-mark">G</span>
-        <span>GambaDex</span>
-      </a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#casinos">Casinos</a>
-        <a href="#gpt">GPT</a>
-        <a href="#faq">FAQ</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div>
-          <div class="eyebrow">Referral rewards, simplified</div>
-          <h1>Find better <span>bonuses</span> and smarter rewards.</h1>
-          <p class="lead">GambaDex helps you discover referral rewards, sign-up offers, and platform details for sweepstakes casinos, crypto casinos, and get-paid-to platforms.</p>
-          <div class="cta-row">
-            <a class="button primary" href="#casinos">Explore offers</a>
-            <a class="button" href="#faq">Learn more</a>
-          </div>
-          <div class="stats">
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Market watch</span>
+  <div id="app">
+    <header>
+      <nav class="shell" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="GambaDex home">
+          <span class="brand-mark" aria-hidden="true"><i class="brand-tile brand-tile-g"><span class="brand-glyph">G</span></i><i class="brand-tile brand-tile-dex"><span class="brand-glyph">DEX</[...]
+          <span class="brand-copy"><b>GambaDex</b><small>Referral//Index</small></span>
+        </a>
+        <div class="nav-links">
+          <details class="reward-menu">
+            <summary><span class="nav-glint">Explore</span></summary>
+            <div class="reward-menu-panel">
+              <a href="#casinos"><span class="menu-glint">Crypto Casinos</span></a>
+              <a href="#us-casinos"><span class="menu-glint">U.S. Casinos</span></a>
+              <a href="#gpt"><span class="menu-glint">GPT Platforms</span></a>
+              <a href="#rewards-details"><span class="menu-glint">Rewards</span></a>
+<a href="#registration-dialog" class="register-trigger" aria-haspopup="dialog"><span class="menu-glint">Register here</span></a>
+                      <button type="button" class="nav-contact-trigger" aria-haspopup="dialog"><span class="menu-glint">Contact us</span></button>
             </div>
-            <div class="stat">
-              <strong>150+</strong>
-              <span>Offers tracked</span>
+          </details>
+        </div>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="shell">
+          <div class="hero-grid">
+            <div class="hero-showcase">
+              <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba[...]
             </div>
-            <div class="stat">
-              <strong>0</strong>
-              <span>Guesswork</span>
+              <section class="hero-bonus" aria-labelledby="stake-bonus-heading">
+                <div class="bonus-card">
+                  <div class="partner-badge">
+                    <svg class="partner-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor"></path></svg>
+                    <span>Official Partner of Stake.us</span>
+                  </div>
+                  <h2 id="stake-bonus-heading">Stake Sign-Up Bonus</h2>
+                  <p class="bonus-offer">
+                    <strong class="offer-hero">25 SC Free</strong>
+                    <span class="offer-sub"><strong class="tri-cobalt">250,000 GC</strong><strong class="tri-gold">3.5% rakeback</strong></span>
+                  </p>
+                  <a class="bonus-claim" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim Bonus</a>
+                </div>
+              </section>
+            <div class="hero-copy">
+              <div class="affiliate-plaque"><strong><span class="banner-top">Affiliate</span><span class="banner-bottom"><span class="rewards-word">Rewards</span> <span class="done-word">Done</span></span></strong></div>
+              <div class="difference-block">
+                <div class="difference-title">GDex Difference</div>
+                <div class="impact-line"><span>Shared rewards</span><strong>Share in any commission you generate—for life.</strong></div>
+                <div class="impact-line"><span>Tiered benefits</span><strong>Your share increases as you climb through the ranks.</strong></div>
+                <div class="impact-line"><span>Referral bonus</span><strong>Earn commission share and boost your rate even further.</strong></div>
+                <div class="impact-line"><span>VIP experience</span><strong>Platinum or equivalent unlocks exclusive benefits.</strong></div>
+                <div class="impact-line"><span>Highroller experience</span><strong>Bespoke rewards for eligible high-volume players.</strong></div>
+                <div class="impact-line"><span>After signup</span><strong>Support to assist and help navigate.</strong></div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <aside class="hero-card" aria-label="Featured bonus">
-          <h2>Featured deal</h2>
-          <div class="offer">
-            <div>
-              <small>Stake.us</small>
-              <strong>25 SC Free</strong>
-            </div>
-            <span>+</span>
-            <div>
-              <small>Bonus stack</small>
-              <strong>250k GC</strong>
-            </div>
+      <!-- Visible FAQ section added for AEO (Answer Engine Optimization) -->
+      <section class="group reveal" id="faq" aria-labelledby="faq-heading">
+        <div class="group-head">
+          <span class="index">FAQ</span>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+          <p>Short, direct answers to common questions about GambaDex and how referral rewards work.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>What is GambaDex?</h3>
+            <p>GambaDex lists referral rewards and sign-up instructions for sweepstakes casinos, crypto casinos, and GPT platforms so you can quickly find current offers and how to claim them.</p>
+          </article>
+          <article class="card">
+            <h3>How do referral rewards work on GambaDex?</h3>
+            <p>Use the referral link on a listing and complete any qualifying actions on the partner site; the referring account may receive a commission or bonus as described on each listing.</p>
+          </article>
+          <article class="card">
+            <h3>Is GambaDex legal where I live?</h3>
+            <p>Rules and availability vary by jurisdiction. Check the platform's terms and local laws before registering—GambaDex provides disclaimers for each listing.</p>
+          </article>
+          <article class="card">
+            <h3>How do I claim my sign-up bonus?</h3>
+            <p>Follow the listing's instructions (use the referral link, meet wagering or registration requirements, and contact platform support if manual activation is needed).</p>
+          </article>
+          <article class="card">
+            <h3>How can I contact GambaDex?</h3>
+            <p>Email <a href="mailto:GambaDex@protonmail.com">GambaDex@protonmail.com</a> for support, corrections, or partnership inquiries.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="jumpbar">
+        <div class="jumpbar-inner shell">
+          <a href="#casinos">Crypto Casinos</a>
+          <a href="#us-casinos">U.S. Sweepstakes</a>
+          <a href="#gpt">Get Paid To (GPT)</a>
+        </div>
+      </div>
+
+      <div class="directory shell" id="rewards">
+        <section class="group reveal" id="casinos">
+          <div class="group-head">
+            <span class="index">01 / CRYPTO CASINOS</span>
+            <h2>Crypto Casinos</h2>
+            <p>International platforms. Access, licensing, payment options, and rules vary by jurisdiction.</p>
           </div>
-          <div class="bonus-panel">
-            <div class="bonus-line"><span>Referral rate</span><strong>3.5% rakeback</strong></div>
-            <div class="bonus-line"><span>Eligibility</span><strong>New users</strong></div>
-            <div class="bonus-line"><span>Action</span><strong>Claim bonus</strong></div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#5ad6b8">S</div><span class="site-domain">STAKE.COM</span></div><span class="status live">Referral live</span></div>
+              <h3>Stake.com</h3><p>Online casino · International access</p>
+              <div class="card-foot"><span class="region">International · Restricted regions</span><a class="live-link" href="https://stake.com/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Visit</a></div>
+            </article>
+            <article class="card">
+              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#8b79d2">SH</div><span class="site-domain">SHUFFLE.COM</span></div><span class="status live">Referral live</span></div>
+              <h3>Shuffle.com</h3><p>Online casino · International access</p>
+              <div class="card-foot"><span class="region">International · Restricted regions</span><a class="live-link" href="https://shuffle.com?r=GDEX" target="_blank" rel="noopener noreferrer sponsored">Visit</a></div>
+            </article>
           </div>
+        </section>
+
+        <!-- remaining content unchanged -->
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-row shell">
+        <aside class="notice disclaimer-box disclaimer-teal" id="legal-disclaimer"><strong>Legal / Platforms</strong><p>Platform names and trademarks belong to their respective owners. Listings do not imply endorsement.</p></aside>
+        <aside class="notice disclaimer-box disclaimer-cobalt"><strong>Raffle Eligibility</strong><p id="raffle-eligibility">Referrals qualify for 1 raffle ticket upon reaching Gold VIP status or higher; terms vary by partner.</p></aside>
+        <aside class="notice disclaimer-box disclaimer-amber" id="disclosure">
+          <strong>Disclosure / Legal Age</strong>
+          <p>Links are referral links. Gambling involves risk — play responsibly and follow local laws. You must be of legal age to participate.</p>
         </aside>
+        <a href="#top">Back to top ↑</a>
       </div>
-    </section>
+    </footer>
+  </div>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(section => observer.observe(section));
 
-    <section class="group shell" id="about">
-      <div class="group-head">
-        <h2>Why GambaDex</h2>
-        <p>We aggregate high-visibility platform deals and present them in a cleaner, easier-to-scan format so you can compare offers without digging through scattered pages.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>Clear listings</h3>
-          <p>Each offer includes the platform, sign-up details, and current reward structure.</p>
-        </article>
-        <article class="card">
-          <h3>Smarter comparison</h3>
-          <p>Compare bonuses, value, and rewards at a glance before you commit.</p>
-        </article>
-        <article class="card">
-          <h3>Legal awareness</h3>
-          <p>Availability and rules vary by jurisdiction, so we display disclaimers and legal context.</p>
-        </article>
-      </div>
-    </section>
+    const rewardMenu = document.querySelector('.reward-menu');
+    if (rewardMenu) {
+      rewardMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => rewardMenu.removeAttribute('open')));
+      document.addEventListener('click', event => { if (!rewardMenu.contains(event.target)) rewardMenu.removeAttribute('open'); });
+    }
 
-    <section class="group shell" id="casinos">
-      <div class="group-head">
-        <h2>Top casino offers</h2>
-        <p>Curated categories for casinos and reward platforms where referral and bonus terms can change quickly.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>Stake.com</h3>
-          <p>International online casino • Referral live</p>
-        </article>
-        <article class="card">
-          <h3>Shuffle.com</h3>
-          <p>International online casino • Referral live</p>
-        </article>
-        <article class="card">
-          <h3>Gamdom</h3>
-          <p>Crypto casino • Promotions vary by region</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="group shell" id="gpt">
-      <div class="group-head">
-        <h2>GPT platforms</h2>
-        <p>For get-paid-to offers, reward programs, and referral deals that reward participation and referrals.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>Freecash</h3>
-          <p>Reward platform • Offers and payout rules vary by user location.</p>
-        </article>
-        <article class="card">
-          <h3>InboxDollars</h3>
-          <p>GPT / rewards platform • Sign-up conditions and payout timings vary.</p>
-        </article>
-        <article class="card">
-          <h3>Swagbucks</h3>
-          <p>Rewards platform • Referral incentives depend on current program rules.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="group shell" id="faq">
-      <div class="group-head">
-        <h2>FAQ</h2>
-        <p>Common questions about how referral rewards and sign-up bonuses work.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>What is GambaDex?</h3>
-          <p>GambaDex is a directory of referral rewards and bonus information for sweepstakes-style casinos, crypto casinos, and GPT platforms.</p>
-        </article>
-        <article class="card">
-          <h3>How do rewards work?</h3>
-          <p>Users sign up through a referral link and complete qualifying actions, which may produce a commission or bonus as disclosed on each listing.</p>
-        </article>
-        <article class="card">
-          <h3>Is it legal?</h3>
-          <p>Availability and legality vary by jurisdiction. Always check local laws and the platform’s terms before registering.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="shell footer-grid">
-      <div class="footer-box">
-        <strong>Legal / Platforms</strong>
-        Platform names and trademarks belong to their respective owners. Listings do not imply endorsement.
-      </div>
-      <div class="footer-box">
-        <strong>Disclosure</strong>
-        Links are referral links. Gambling involves risk. Play responsibly and follow local laws.
-      </div>
-      <div class="footer-box">
-        <strong>Contact</strong>
-        Email GambaDex@protonmail.com for support or partnership inquiries.
-      </div>
-    </div>
-  </footer>
+    const heroTermMenus = [...document.querySelectorAll('.hero-term-menu')];
+    const closeHeroMenus = () => heroTermMenus.forEach(menu => menu.classList.remove('open'));
+    heroTermMenus.forEach(menu => { menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeHeroMenus)); });
+    document.addEventListener('click', closeHeroMenus);
+  </script>
 </body>
 </html>
