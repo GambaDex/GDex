@@ -160,7 +160,7 @@
     .hero-sub-banner { width: fit-content; margin: 14px auto 0; padding: 7px 16px; display: flex; align-items: center; justify-content: center; gap: 11px; border: 1px solid #33415b; color: #fff; background: linear-gradient(90deg, rgba(105,221,216,.07), rgba(102,135,217,.13), rgba(212,168,95,.07)); box-shadow: inset 0 0 18px rgba(102,135,217,.05); }
     .hero-sub-banner .sub-dot { color: var(--cobalt); }
     .hero-sub-banner .guaranteed-word { color: #fff; }
-    .hero-copy { display: grid; gap: 12px; }
+    .hero-copy { display: grid; gap: 20px; }
     .most-sites-block, .difference-block { border: 1px solid #252f43; background: radial-gradient(circle at 100% 0, rgba(155,117,65,.06), transparent 42%), radial-gradient(circle at 0 100%, rgba(67,91,145,.06), transparent 48%), #05080d; box-shadow: 8px 8px 0 rgba(67,168,163,.025); overflow: hidden; }
     .most-sites-block { margin-top: 8px; }
     .most-sites-block .difference-title { text-align: center; }
@@ -197,7 +197,7 @@
     .jumpbar a::after { content: "↘"; color: var(--acid); }
     .jumpbar a:hover { color: var(--text); background: linear-gradient(90deg, rgba(105,221,216,.08), rgba(102,135,217,.1), rgba(212,168,95,.06)); }
 
-    .directory { padding: 14px 0 90px; position: relative; }
+    .directory { padding: 14px 0 130px; position: relative; }
     .directory::before {
       content: "";
       position: absolute;
@@ -321,7 +321,7 @@
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } .hero-showcase::after { animation: none; } }
 
     /* Mirrored rewards panel; all layout overrides are local to this section. */
-    .rewards-details { margin-top: 62px; padding-top: 38px; border-top: 1px solid var(--line); }
+    .rewards-details { margin-top: 118px; padding-top: 38px; border-top: 1px solid var(--line); }
     .rewards-details-grid { display: grid; grid-template-columns: 470px minmax(0, 1fr); gap: 50px; align-items: center; }
     .rewards-details-grid > * { min-width: 0; }
     .rewards-details .hero-showcase { min-height: 390px; display: flex; align-items: center; justify-content: center; }
@@ -335,7 +335,7 @@
     }
 
     /* Promo countdown: scoped independently of existing panels. */
-    .promo-countdown { padding: 28px; border: 1px solid #30384a; background: radial-gradient(circle at 0 100%, rgba(67,91,145,.09), transparent 48%), #05080d; box-shadow: 8px 8px 0 rgba(67,168,163,.025); }
+    .promo-countdown { margin-top: 118px; padding: 28px; border: 1px solid #30384a; background: radial-gradient(circle at 0 100%, rgba(67,91,145,.09), transparent 48%), #05080d; box-shadow: 8px 8px 0 rgba(67,168,163,.025); }
     .promo-countdown h2 { margin: 0 0 24px; text-align: center; color: var(--neon-cyan); font: 400 clamp(.9rem, 2vw, 1.25rem) "Michroma", sans-serif; }
     .promo-countdown .countdown-cells { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
     .promo-countdown .countdown-cell { min-width: 0; padding: 22px 6px; text-align: center; border: 1px solid #30384a; border-top: 2px solid var(--neon-cyan); background: linear-gradient(145deg, rgba(89,222,209,.07), rgba(102,135,217,.04)); }
@@ -415,10 +415,10 @@
           <details class="reward-menu">
             <summary><span class="nav-glint">Explore</span></summary>
             <div class="reward-menu-panel">
-              <a href="#casinos"><span class="menu-glint">Explore Casinos</span></a>
-              <a href="#us-casinos"><span class="menu-glint">Explore U.S. Casinos</span></a>
-              <a href="#gpt"><span class="menu-glint">Explore GPT Platforms</span></a>
-              <a href="#rewards-details"><span class="menu-glint">Explore Rewards</span></a>
+              <a href="#us-casinos"><span class="menu-glint">U.S. Casinos</span></a>
+              <a href="#casinos"><span class="menu-glint">International Casinos</span></a>
+              <a href="#gpt"><span class="menu-glint">GPT Platforms</span></a>
+              <a href="#rewards-details"><span class="menu-glint">Rewards</span></a>
 <a href="#registration-dialog" class="register-trigger" aria-haspopup="dialog"><span class="menu-glint">Register here</span></a>
                       <button type="button" class="nav-contact-trigger" aria-haspopup="dialog"><span class="menu-glint">Contact us</span></button>
             </div>
@@ -431,9 +431,28 @@
         <div class="shell">
           <div class="hero-grid">
             <div class="hero-showcase">
-              <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba</a><span class="hero-term-panel"><a href="#casinos"><span class="menu-glint">Casinos</span></a><a href="#us-casinos"><span class="menu-glint">U.S. Sweepstakes</span></a><a href="#hidden-gems"><span class="menu-glint">Hidden Gems</span></a></span></span><span class="hero-term-menu"><a class="hero-term-button gpt-word" href="#gpt">GPT</a><span class="hero-term-panel"><a href="#freecash"><span class="menu-glint">Freecash</span></a><a href="#earnx"><span class="menu-glint">Earnx.gg</span></a></span></span><a class="hero-term-link benefits-word" href="#rewards-details">Rewards</a></span><span class="hero-sub-banner"><span class="anywhere-word">Anywhere</span><span class="sub-dot">·</span><span class="guaranteed-word">Guaranteed</span></span></div>
+              <div class="overline"><span class="best-word">The Best</span><span class="tagline-links"><span class="hero-term-menu"><a class="hero-term-button gamba-word" href="#us-casinos">Gamba</a><span class="hero-term-panel"><a href="#us-casinos"><span class="menu-glint">U.S. Sweepstakes</span></a><a href="#casinos"><span class="menu-glint">International Casinos</span></a><a href="#hidden-gems"><span class="menu-glint">Hidden Gems</span></a></span></span><span class="hero-term-menu"><a class="hero-term-button gpt-word" href="#gpt">GPT</a><span class="hero-term-panel"><a href="#freecash"><span class="menu-glint">Freecash</span></a></span></span><a class="hero-term-link benefits-word" href="#rewards-details">Rewards</a></span><span class="share-word">Share</span><span class="hero-sub-banner"><span class="anywhere-word">Anywhere</span><span class="sub-dot">·</span><span class="guaranteed-word">Guaranteed</span></span></div>
             </div>
             <div class="hero-copy">
+              <section class="stake-offer" aria-labelledby="stake-offer-heading">
+                <p class="so-badge">
+                  <svg class="so-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 2.4 4.5 5.3v5.9c0 4.8 3.2 8.2 7.5 10.4 4.3-2.2 7.5-5.6 7.5-10.4V5.3L12 2.4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="m8.6 12.1 2.4 2.4 4.4-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Official Stake Affiliate Partner
+                </p>
+                <h2 class="so-heading" id="stake-offer-heading">Stake.us No Deposit Sign up Offer</h2>
+                <p class="so-offer">
+                  <span class="so-lead">Get</span>
+                  <span class="so-teal">25 SC Free</span>
+                  <span class="so-sep" aria-hidden="true">/</span>
+                  <span class="so-cobalt">250,000 GC</span>
+                  <span class="so-sep" aria-hidden="true">/</span>
+                  <span class="so-gold">3.5% Rakeback Unlocked</span>
+                </p>
+                <a class="so-cta" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim Sign Up Bonus</a>
+              </section>
               <div class="affiliate-plaque"><strong><span class="banner-top">Affiliate</span><span class="banner-bottom"><span class="rewards-word">Rewards</span> <span class="done-word">Done</span> <span class="right-word">Right</span></span></strong></div>
               <div class="difference-block">
                 <div class="difference-title">GDex Difference</div>
@@ -460,17 +479,38 @@
 
       <div class="jumpbar">
         <div class="jumpbar-inner shell">
-          <a href="#casinos">Casinos</a>
           <a href="#us-casinos">U.S. Sweepstakes</a>
+          <a href="#casinos">International Casinos</a>
           <a href="#gpt">Get Paid To (GPT)</a>
         </div>
       </div>
 
       <div class="directory shell" id="rewards">
+        <section class="group reveal" id="us-casinos">
+          <div class="group-head">
+            <span class="index">01 / US</span>
+            <h2>U.S. Sweepstakes Casinos</h2>
+            <p>Sweepstakes-style platforms available in eligible U.S. locations. State restrictions apply.</p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#5ad6b8">S</div><span class="site-domain">STAKE.US</span></div><span class="status live">Referral live</span></div>
+              <h3>Stake.us</h3><p>Social casino · Sweepstakes model</p>
+              <p class="card-note">Message Stake.us support after sign up to claim your bonus!</p>
+              <div class="card-foot"><span class="region">United States · Eligible states</span><a class="live-link" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Claim Stake.us Sign-Up Bonus</a></div>
+            </article>
+            <article class="card">
+              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#8b79d2">SH</div><span class="site-domain">SHUFFLE.US</span></div><span class="status live">Referral live</span></div>
+              <h3>Shuffle.us</h3><p>Social casino · Sweepstakes model</p>
+              <div class="card-foot"><span class="region">United States · Eligible states</span><a class="live-link" href="https://shuffle.us?r=WINNN" target="_blank" rel="noopener noreferrer sponsored">Sign up for Shuffle.us</a></div>
+            </article>
+          </div>
+        </section>
+
         <section class="group reveal" id="casinos">
           <div class="group-head">
-            <span class="index">01 / CASINOS</span>
-            <h2>Casinos</h2>
+            <span class="index">02 / INTERNATIONAL</span>
+            <h2>International Casinos</h2>
             <p>International platforms. Access, licensing, payment options, and rules vary by jurisdiction.</p>
           </div>
           <div class="cards">
@@ -483,26 +523,6 @@
               <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#8b79d2">SH</div><span class="site-domain">SHUFFLE.COM</span></div><span class="status live">Referral live</span></div>
               <h3>Shuffle.com</h3><p>Online casino · International access</p>
               <div class="card-foot"><span class="region">International · Restricted regions</span><a class="live-link" href="https://shuffle.com?r=GDEX" target="_blank" rel="noopener noreferrer sponsored">Sign up for Shuffle.com</a></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="group reveal" id="us-casinos">
-          <div class="group-head">
-            <span class="index">02 / US</span>
-            <h2>U.S. Sweepstakes Casinos</h2>
-            <p>Sweepstakes-style platforms available in eligible U.S. locations. State restrictions apply.</p>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#5ad6b8">S</div><span class="site-domain">STAKE.US</span></div><span class="status live">Referral live</span></div>
-              <h3>Stake.us</h3><p>Social casino · Sweepstakes model</p>
-              <div class="card-foot"><span class="region">United States · Eligible states</span><a class="live-link" href="https://stake.us/?c=GDEX" target="_blank" rel="noopener noreferrer sponsored">Sign up for Stake.us</a></div>
-            </article>
-            <article class="card">
-              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#8b79d2">SH</div><span class="site-domain">SHUFFLE.US</span></div><span class="status live">Referral live</span></div>
-              <h3>Shuffle.us</h3><p>Social casino · Sweepstakes model</p>
-              <div class="card-foot"><span class="region">United States · Eligible states</span><a class="live-link" href="https://shuffle.us?r=WINNN" target="_blank" rel="noopener noreferrer sponsored">Sign up for Shuffle.us</a></div>
             </article>
           </div>
         </section>
@@ -533,11 +553,6 @@
               <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#c99a5a">FC</div><span class="site-domain">GPT PLATFORM</span></div><span class="status live">Referral live</span></div>
               <h3>Freecash</h3><p>Offers · Surveys · Games</p>
               <div class="card-foot"><span class="region">Availability varies</span><a class="live-link" href="https://freecash.com/r/6XWRP" target="_blank" rel="noopener noreferrer sponsored">Sign up for Freecash</a></div>
-            </article>
-            <article class="card" id="earnx">
-              <div class="card-top"><div class="site-id"><div class="site-mark" style="--mark:#5bc4cc">EX</div><span class="site-domain">GPT PLATFORM</span></div><span class="status live">Referral live</span></div>
-              <h3>Earnx.gg</h3><p>Get Paid To platform</p>
-              <div class="card-foot"><span class="region">Availability varies</span><a class="live-link" href="https://earnx.gg/r/TLM7M2" target="_blank" rel="noopener noreferrer sponsored">Sign up for Earnx.gg</a></div>
             </article>
           </div>
         </section>
@@ -712,10 +727,38 @@ footer .disclaimer-box p,footer .disclaimer-box strong { font-size: .55rem; }
   .reward-menu summary { min-width: 112px; padding: 10px; }
   .nav-glint { font-size: .58rem; }
   .tagline-links { gap: 8px; font-size: .72rem; letter-spacing: .025em; }
+  .overline .share-word { font-size: .66rem; }
 }
 </style>
 <style id="gdex-white-popup-titles">
 .gdex-dialog #registration-title, .gdex-dialog #contact-title { color: #fff; }
+</style>
+<style id="gdex-stake-offer">
+/* Stake.us no-deposit offer card, shown in the hero above the affiliate plaque. */
+.stake-offer { margin: 0; padding: 26px 22px 30px; position: relative; text-align: center; border: 1px solid #30384a; background: radial-gradient(circle at 50% -20%, rgba(67,168,163,.14), transparent 52%), radial-gradient(circle at 6% 112%, rgba(67,91,145,.12), transparent 48%), radial-gradient(circle at 94% 112%, rgba(155,117,65,.1), transparent 48%), #05080d; box-shadow: 8px 8px 0 rgba(67,168,163,.03), inset 0 0 70px rgba(0,0,0,.55); }
+.stake-offer::before { content: ""; position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--neon-cyan), var(--cobalt), var(--neon-gold)); box-shadow: 0 0 12px rgba(67,168,163,.4); }
+.stake-offer .so-badge { width: fit-content; margin: 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border: 1px solid #33415b; background: linear-gradient(90deg, rgba(67,168,163,.1), rgba(67,91,145,.14), rgba(155,117,65,.09)); color: #d7f4f2; font: 500 .54rem var(--mono); letter-spacing: .1em; text-transform: uppercase; box-shadow: inset 0 0 18px rgba(67,91,145,.1); }
+.stake-offer .so-shield { width: 15px; height: 15px; flex: 0 0 auto; color: var(--neon-cyan); filter: drop-shadow(0 0 6px rgba(67,168,163,.6)); }
+.stake-offer .so-heading { width: fit-content; margin: 18px auto 0; padding-bottom: 11px; position: relative; color: #f2fbfb; font: 800 clamp(1.5rem, 2.6vw, 2.15rem)/.98 var(--display); letter-spacing: .012em; text-transform: uppercase; text-shadow: 1px 1px 0 #05070a, 3px 4px 0 #05070a, 6px 9px 16px rgba(0,0,0,.72); }
+.stake-offer .so-heading::after { content: ""; position: absolute; left: 7%; right: 7%; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--neon-cyan), var(--cobalt), var(--neon-gold)); box-shadow: 0 0 10px rgba(102,135,217,.45); transform: skewX(-18deg); }
+.stake-offer .so-offer { margin: 18px auto 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 7px 10px; font: 700 clamp(.9rem, 1.6vw, 1.2rem)/1.2 var(--display); letter-spacing: .04em; text-transform: uppercase; }
+.stake-offer .so-offer .so-lead { color: #9eabb4; font-weight: 600; }
+.stake-offer .so-offer .so-teal { color: #55e7df; text-shadow: 0 0 11px rgba(85,231,223,.4); }
+.stake-offer .so-offer .so-cobalt { color: #6f94e8; text-shadow: 0 0 11px rgba(111,148,232,.42); }
+.stake-offer .so-offer .so-gold { color: #d4a85f; text-shadow: 0 0 11px rgba(212,168,95,.42); }
+.stake-offer .so-offer .so-sep { color: #3a4756; font-weight: 400; }
+.stake-offer .so-cta { margin: 22px auto 0; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 30px; position: relative; color: #eaffff; text-decoration: none; text-transform: uppercase; font: 600 .7rem var(--mono); letter-spacing: .1em; border: 1px solid var(--neon-cyan); border-bottom-color: var(--neon-gold); border-radius: 2px; background: linear-gradient(110deg, rgba(67,168,163,.22), rgba(67,91,145,.42) 55%, rgba(155,117,65,.22)); box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 0 20px rgba(67,168,163,.14), 0 10px 26px rgba(0,0,0,.5); transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, color .16s ease; }
+.stake-offer .so-cta::before { content: ""; position: absolute; left: 10px; right: 10px; top: 4px; height: 2px; background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--cobalt), var(--neon-gold), transparent); opacity: .85; }
+.stake-offer .so-cta::after { content: "\2197"; color: var(--neon-gold); font-size: .95em; }
+.stake-offer .so-cta:hover { color: #fff; border-color: var(--neon-gold); transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 0 26px rgba(155,117,65,.28), 0 14px 30px rgba(0,0,0,.55); }
+.stake-offer .so-cta:focus-visible { outline: 2px solid var(--neon-cyan); outline-offset: 4px; }
+@media (max-width: 600px) { .stake-offer { padding: 22px 16px 26px; } .stake-offer .so-offer { gap: 5px 8px; } .stake-offer .so-cta { width: 100%; padding: 14px 18px; } }
+/* "Share" tagline word in the hero, following the tri-color scheme. */
+.overline .share-word { width: fit-content; margin: 12px auto 0; padding-left: .18em; display: block; color: transparent; background: linear-gradient(90deg, var(--neon-cyan), var(--cobalt) 50%, var(--neon-gold)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font: 400 clamp(.88rem, 1.5vw, 1.2rem) "Michroma", sans-serif; letter-spacing: .18em; text-transform: uppercase; filter: drop-shadow(0 0 9px rgba(102,135,217,.4)); }
+</style>
+<style id="gdex-stakeus-card-note">
+/* Claim instruction note inside the Stake.us referral card. */
+.card .card-note { margin: -12px 0 20px; padding: 9px 12px; position: relative; border: 1px solid rgba(67,168,163,.3); border-left: 3px solid var(--neon-cyan); background: linear-gradient(90deg, rgba(67,168,163,.1), rgba(67,91,145,.05) 62%, transparent); color: #d3ebe8; font-size: .68rem; line-height: 1.5; letter-spacing: .01em; }
 </style>
 <!-- Set PUBLIC Turnstile site key only. Never insert private credentials. -->
 <div id="gdex-config" data-sitekey="" hidden></div>
